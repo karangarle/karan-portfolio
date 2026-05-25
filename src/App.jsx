@@ -1,6 +1,8 @@
-import React from "react";
-import image from './assets/img/IMG_6545.JPG'
+import React, { useState } from "react";
+import image from "./assets/img/IMG_6545.JPG";
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <div className="bg-black text-gray-200">
@@ -9,6 +11,7 @@ function App() {
             <h1 className="text-2xl font-bold text-purple-500">
               Karan's Portfolio
             </h1>
+
             <nav className="hidden md:flex space-x-6 font-medium">
               <a href="#home" className="hover:text-purple-400">
                 Home
@@ -32,8 +35,12 @@ function App() {
                 Contact
               </a>
             </nav>
+
             <div className="md:hidden">
-              <button id="menu-btn" className="text-purple-400 focus:outline-none">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-purple-400 focus:outline-none"
+              >
                 <svg
                   className="w-8 h-8"
                   fill="none"
@@ -44,35 +51,65 @@ function App() {
                     strokeLinejoin="round"
                     strokeWidth="2"
                     d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
           </div>
+
           <div
-            id="mobile-menu"
-            className="hidden md:hidden bg-black/90 border-t border-purple-700"
+            className={`md:hidden bg-black/90 border-t border-purple-700 ${
+              menuOpen ? "block" : "hidden"
+            }`}
           >
             <nav className="flex flex-col space-y-2 p-4 text-center">
-              <a href="#home" className="hover:text-purple-400">
+              <a
+                href="#home"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Home
               </a>
-              <a href="#about" className="hover:text-purple-400">
+              <a
+                href="#about"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 About
               </a>
-              <a href="#skills" className="hover:text-purple-400">
+              <a
+                href="#skills"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Skills
               </a>
-              <a href="#projects" className="hover:text-purple-400">
+              <a
+                href="#projects"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Projects
               </a>
-              <a href="#experience" className="hover:text-purple-400">
+              <a
+                href="#experience"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Experience
               </a>
-              <a href="#education" className="hover:text-purple-400">
+              <a
+                href="#education"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Education
               </a>
-              <a href="#contact" className="hover:text-purple-400">
+              <a
+                href="#contact"
+                className="hover:text-purple-400"
+                onClick={() => setMenuOpen(false)}
+              >
                 Contact
               </a>
             </nav>
@@ -103,31 +140,31 @@ function App() {
             </p>
             <a
               href="#projects"
-              className="bg-purple-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow hover:bg-purple-700 transition inline-block"
+              className="bg-purple-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow hover:bg-purple-700 transition inline-block p-1"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="bg-black border-purple-500 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow hover:bg-purple-700 transition inline-block"
+              className="bg-black border-purple-500 border-2 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow hover:bg-purple-700 transition inline-block m-2"
             >
               Get In Touch
             </a>
           </div>
         </section>
 
-        <section id="about" className="py-16 md:py-20 container mx-auto px-6">
+        <section id="about" className="py-16 md:py-20 container mx-auto px-6 pt-20">
           <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-purple-400">
             About Me
           </h3>
           <p className="text-center max-w-3xl mx-auto text-base sm:text-lg md:text-lg leading-relaxed text-gray-300">
-            I am a
-            <span className="font-semibold text-purple-400">
+            I am a 
+            <span className="font-semibold text-purple-400 pl-1 pr-1">
               MERN Stack Developer
             </span>
             passionate about creating modern, scalable, and efficient web
             applications. With strong expertise in
-            <span className="text-purple-400">
+            <span className="text-purple-400 pl-1">
               React, Node.js, Express, MongoDB
             </span>
             , I deliver seamless digital solutions that blend performance with
@@ -137,7 +174,7 @@ function App() {
 
         <section
           id="skills"
-          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black"
+          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black pt-20"
         >
           <div className="container mx-auto px-6">
             <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-purple-400">
@@ -178,7 +215,10 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="py-16 md:py-20 container mx-auto px-6">
+        <section
+          id="projects"
+          className="py-16 md:py-20 container mx-auto px-6 pt-20"
+        >
           <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-purple-400">
             Projects
           </h3>
@@ -188,7 +228,7 @@ function App() {
                 O’TerRi Laundry Management System
               </h4>
               <p className="text-gray-400 mt-1">
-                Tech Stack: React.js, Node.js, MySQL
+                Tech Stack: React.js, Node.js, MySQL |
                 <a
                   href="https://play.google.com/store/apps/details?id=com.mksoterri.app"
                   className="text-purple-300 underline ml-1"
@@ -248,7 +288,7 @@ function App() {
 
         <section
           id="experience"
-          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black"
+          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black pt-20"
         >
           <div className="container mx-auto px-6">
             <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-purple-400">
@@ -262,7 +302,9 @@ function App() {
                 <h4 className="text-lg sm:text-xl font-semibold text-purple-300">
                   MERN Stack Developer
                 </h4>
-                <p className="text-gray-400">MKS Digitech LLP | 2024 - Present</p>
+                <p className="text-gray-400">
+                  MKS Digitech LLP | 2024 - Present
+                </p>
                 <ul className="list-disc ml-6 mt-3 space-y-1 sm:space-y-2 text-gray-300 text-sm sm:text-base">
                   <li>
                     Built live projects including O’TerRi Laundry Management
@@ -304,7 +346,10 @@ function App() {
           </div>
         </section>
 
-        <section id="education" className="py-16 md:py-20 container mx-auto px-6">
+        <section
+          id="education"
+          className="py-16 md:py-20 container mx-auto px-6 pt-20"
+        >
           <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-purple-400">
             Education
           </h3>
@@ -328,7 +373,7 @@ function App() {
 
         <section
           id="contact"
-          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black"
+          className="py-16 md:py-20 bg-gradient-to-r from-black via-purple-950 to-black pt-20"
         >
           <div className="max-w-7xl mx-auto px-6">
             <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-purple-400">
