@@ -396,6 +396,12 @@ function App() {
                     </h4>
                     <p className="mt-1">karangarale123@gmail.com</p>
                   </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg sm:text-xl font-semibold text-purple-300">
+                      Email
+                    </h4>
+                    <p className="mt-1">karan.garale.tech@gmail.com</p>
+                  </div>
                 </div>
 
                 <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-700 text-white shadow hover:shadow-purple-700 transition flex items-center gap-4">
