@@ -41,7 +41,7 @@ export default function Navbar({ activeSection, menuOpen, setMenuOpen }) {
         {/* Resume + Mobile toggle */}
         <div className="flex items-center gap-2 sm:gap-3">
           <a
-            href={`${import.meta.env.BASE_URL}Karan_Garale_MERN_Developer.pdf`}
+            href={`${import.meta.env.BASE_URL}Karan_Garale_Full_Stack_Developer.pdf`}
             target="_blank"
             rel="noreferrer"
             className="hidden lg:flex btn-primary text-sm px-4 py-2"
@@ -99,7 +99,7 @@ export default function Navbar({ activeSection, menuOpen, setMenuOpen }) {
                 </motion.a>
               ))}
               <motion.a
-                href={`${import.meta.env.BASE_URL}Karan_Garale_MERN_Developer.pdf`}
+                href={`${import.meta.env.BASE_URL}Karan_Garale_Full_Stack_Developer.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 initial={{ opacity: 0, x: -15 }}
