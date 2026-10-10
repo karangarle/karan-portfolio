@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import SectionHeader from "../UI/SectionHeader";
 import { RevealGroup, scaleIn } from "../UI/Reveal";
 
@@ -9,8 +10,8 @@ export default function Certifications() {
         <SectionHeader badge="Certifications" title="Credentials" />
         <RevealGroup className="grid sm:grid-cols-2 gap-6">
           {[
-            { title: "Full Stack Developer Internship", issuer: "Hyperlink Infosystem", icon: "🏆", year: "2024" },
-            { title: "MERN Stack Live Projects", issuer: "MKS DigiTech LLP", icon: "🎖️", year: "2024–2025" },
+            { title: "Full Stack Developer Internship", issuer: "Hyperlink Infosystem", icon: "lucide:award", year: "2024" },
+            { title: "MERN Stack Live Projects", issuer: "MKS DigiTech LLP", icon: "lucide:badge-check", year: "2024–2025" },
           ].map(({ title, issuer, icon, year }, i) => (
             <motion.div
               key={title}
@@ -20,10 +21,10 @@ export default function Certifications() {
               className="surface rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex items-center gap-5"
             >
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
+                className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "rgba(56,189,248,0.08)", border: "1px solid rgba(56,189,248,0.15)" }}
               >
-                {icon}
+                <Icon icon={icon} className="w-7 h-7" style={{ color: "#38bdf8" }} />
               </div>
               <div>
                 <h4 className="text-white font-bold text-base mb-1">{title}</h4>

@@ -10,10 +10,10 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = [
-  { cat: "Frontend", color: "#a78bfa", icon: "⚛️", items: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS"] },
-  { cat: "Backend", color: "#38bdf8", icon: "⚙️", items: ["Node.js", "Express.js", "REST APIs", "Apollo GraphQL"] },
-  { cat: "Database", color: "#34d399", icon: "🗄️", items: ["MongoDB", "MySQL", "Redux", "Context API"] },
-  { cat: "DevTools", color: "#fb923c", icon: "🛠️", items: ["Git", "GitLab", "Postman", "VS Code", "Fetch/Axios"] },
+  { cat: "Frontend", color: "#a78bfa", icon: "lucide:layout", items: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS"] },
+  { cat: "Backend", color: "#38bdf8", icon: "lucide:server", items: ["Node.js", "Express.js", "REST APIs", "Apollo GraphQL"] },
+  { cat: "Database", color: "#34d399", icon: "lucide:database", items: ["MongoDB", "MySQL", "Redux", "Context API"] },
+  { cat: "DevTools", color: "#fb923c", icon: "lucide:wrench", items: ["Git", "GitLab", "Postman", "VS Code", "Fetch/Axios"] },
 ];
 
 export const EXPERIENCES = [
@@ -72,7 +72,7 @@ export const PROJECTS = [
     linkLabel: "View Live Site",
     accentColor: "#a78bfa",
     accentBg: "rgba(109,40,217,0.06)",
-    icon: "🏥",
+    icon: "lucide:hospital",
   },
   {
     num: "02",
@@ -85,6 +85,6 @@ export const PROJECTS = [
     linkLabel: "View on Play Store",
     accentColor: "#38bdf8",
     accentBg: "rgba(56,189,248,0.06)",
-    icon: "🧺",
+    icon: "lucide:shirt",
   },
 ];

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import SectionHeader from "../UI/SectionHeader";
 import { RevealGroup, fadeUp } from "../UI/Reveal";
 import { SKILLS } from "../../data/portfolioData";
@@ -28,7 +29,7 @@ export default function Skills() {
                   className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
                   style={{ background: color + "18", border: `1px solid ${color}30` }}
                 >
-                  {icon}
+                  <Icon icon={icon} className="w-5 h-5" style={{ color }} />
                 </div>
                 <div>
                   <p className="text-white font-bold text-base">{cat}</p>

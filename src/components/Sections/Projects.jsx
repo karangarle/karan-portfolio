@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import SectionHeader from "../UI/SectionHeader";
 import TiltCard from "../UI/TiltCard";
 import { Reveal, fadeLeft, fadeRight } from "../UI/Reveal";
@@ -27,7 +28,9 @@ export default function Projects() {
                       className="md:col-span-1 flex flex-col items-center justify-center py-10 px-4"
                       style={{ background: accentBg, borderRight: `1px solid ${accentColor}20` }}
                     >
-                      <div className="text-5xl mb-3">{icon}</div>
+                      <div className="mb-3">
+                        <Icon icon={icon} className="w-12 h-12" style={{ color: accentColor }} />
+                      </div>
                       <p className="text-6xl font-black opacity-10 text-white">{num}</p>
                     </div>
                     {/* ─ Right content ─ */}

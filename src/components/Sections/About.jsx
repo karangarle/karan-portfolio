@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import SectionHeader from "../UI/SectionHeader";
 import { Reveal, RevealGroup, fadeLeft, scaleIn } from "../UI/Reveal";
 import Counter from "../UI/Counter";
@@ -27,13 +28,15 @@ export default function About() {
           {/* Stats */}
           <RevealGroup className="lg:col-span-2 grid grid-cols-2 gap-4">
             {[
-              { n: 2, s: "+", label: "Years Experience", icon: "⚡" },
-              { n: 10, s: "+", label: "Projects Built", icon: "🚀" },
-              { n: 3, s: "", label: "Companies", icon: "🏢" },
-              { n: 100, s: "%", label: "Commitment", icon: "💪" },
-            ].map(({ n, s, label, icon }, i) => (
-              <motion.div key={label} variants={scaleIn} custom={i} className="stat-card">
-                <div className="text-2xl mb-2">{icon}</div>
+              { n: 2, s: "+", label: "Years Experience", icon: "lucide:zap", color: "#a78bfa" },
+              { n: 10, s: "+", label: "Projects Built", icon: "lucide:rocket", color: "#38bdf8" },
+              { n: 3, s: "", label: "Companies", icon: "lucide:building-2", color: "#34d399" },
+              { n: 100, s: "%", label: "Commitment", icon: "lucide:flame", color: "#fb923c" },
+            ].map(({ n, s, label, icon, color }, i) => (
+              <motion.div key={label} variants={scaleIn} custom={i} className="stat-card flex flex-col items-center justify-center text-center p-4">
+                <div className="mb-2">
+                  <Icon icon={icon} className="w-6 h-6" style={{ color }} />
+                </div>
                 <p className="text-3xl font-black gradient-text leading-none mb-1">
                   <Counter to={n} suffix={s} />
                 </p>
