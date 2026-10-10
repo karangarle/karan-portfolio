@@ -119,7 +119,7 @@ export default function Hero() {
                 Let's Talk
               </motion.a>
               <motion.a
-                href={`${import.meta.env.BASE_URL}Karan_Garale_MERN_Developer.pdf`}
+                href={`${import.meta.env.BASE_URL}Karan_Garale_Full_Stack_Developer.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ scale: 1.03 }}
