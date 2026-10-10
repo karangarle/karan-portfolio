@@ -99,11 +99,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.65 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-3.5 sm:gap-4"
             >
               <motion.a
                 href="#projects"
-                className="btn-primary"
+                className="btn-primary w-full sm:w-auto justify-center"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -114,7 +114,7 @@ export default function Hero() {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto justify-center"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -126,14 +126,14 @@ export default function Hero() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto justify-center"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 01-2-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
                 Download CV
@@ -203,7 +203,7 @@ export default function Hero() {
                 }}
               />
               <div
-                className="relative w-72 h-[340px] sm:w-80 sm:h-[400px] xl:w-96 xl:h-[460px] rounded-2xl overflow-hidden"
+                className="relative w-64 h-[290px] sm:w-80 sm:h-[400px] xl:w-96 xl:h-[460px] rounded-2xl overflow-hidden"
                 style={{ border: "2px solid #21262d", borderRadius: "22px" }}
               >
                 <img
@@ -216,9 +216,9 @@ export default function Hero() {
                   className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none"
                   style={{ background: "linear-gradient(to top, rgba(13,17,23,0.95) 20%, transparent)" }}
                 />
-                <div className="absolute bottom-4 left-4 right-4 text-center z-10">
-                  <p className="text-white font-bold text-lg leading-tight">Karan Garale</p>
-                  <p className="text-sm font-medium" style={{ color: "#a78bfa" }}>
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 text-center z-10">
+                  <p className="text-white font-bold text-base sm:text-lg leading-tight">Karan Garale</p>
+                  <p className="text-xs sm:text-sm font-medium" style={{ color: "#a78bfa" }}>
                     MERN Stack Developer
                   </p>
                 </div>
@@ -227,22 +227,22 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 surface rounded-2xl px-4 py-3 text-center shadow-xl backdrop-blur-md z-20"
-                style={{ border: "1px solid #30363d", minWidth: "90px" }}
+                className="absolute -top-3 -right-6 sm:-top-4 sm:-right-8 surface rounded-2xl px-2.5 py-2 sm:px-4 sm:py-3 text-center shadow-xl backdrop-blur-md z-20"
+                style={{ border: "1px solid #30363d", minWidth: "75px" }}
               >
-                <p className="text-2xl font-black gradient-text">2+</p>
-                <p className="text-xs font-semibold" style={{ color: "#8b949e" }}>
+                <p className="text-lg sm:text-2xl font-black gradient-text">2+</p>
+                <p className="text-[9px] sm:text-xs font-semibold" style={{ color: "#8b949e" }}>
                   Years Exp.
                 </p>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-5 -left-8 surface rounded-2xl px-4 py-3 text-center shadow-2xl backdrop-blur-md z-20"
-                style={{ border: "1px solid #30363d", minWidth: "90px" }}
+                className="absolute -bottom-3 -left-6 sm:-bottom-5 sm:-left-8 surface rounded-2xl px-2.5 py-2 sm:px-4 sm:py-3 text-center shadow-2xl backdrop-blur-md z-20"
+                style={{ border: "1px solid #30363d", minWidth: "75px" }}
               >
-                <p className="text-2xl font-black gradient-text">10+</p>
-                <p className="text-xs font-semibold" style={{ color: "#8b949e" }}>
+                <p className="text-lg sm:text-2xl font-black gradient-text">10+</p>
+                <p className="text-[9px] sm:text-xs font-semibold" style={{ color: "#8b949e" }}>
                   Projects
                 </p>
               </motion.div>

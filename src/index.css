@@ -110,7 +110,7 @@ body {
 }
 @media (max-width: 768px) {
   .timeline-line {
-    left: 24px;
+    left: 20px;
     transform: none;
   }
 }

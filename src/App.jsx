@@ -31,7 +31,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ background: "#0d1117", color: "#c9d1d9", minHeight: "100vh" }}>
+    <div className="w-full overflow-x-hidden" style={{ background: "#0d1117", color: "#c9d1d9", minHeight: "100vh" }}>
       {/* Navbar */}
       <Navbar activeSection={activeSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 

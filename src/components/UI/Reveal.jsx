@@ -48,7 +48,7 @@ export function Reveal({ children, variant = fadeUp, custom = 0, className = "" 
   return (
     <motion.div
       ref={ref}
-      className={className}
+      className={`overflow-hidden ${className}`}
       variants={variant}
       custom={custom}
       initial="hidden"
