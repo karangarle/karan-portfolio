@@ -74,8 +74,6 @@ export default function Hero() {
                   2000,
                   "Full-Stack Web Developer",
                   2000,
-                  "Scalable App Builder",
-                  2000,
                 ]}
                 speed={55}
                 wrapper="span"

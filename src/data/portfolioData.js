@@ -10,9 +10,9 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = [
-  { cat: "Frontend", color: "#a78bfa", icon: "lucide:layout", items: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS"] },
+  { cat: "Frontend", color: "#a78bfa", icon: "lucide:layout", items: ["React.js", "Next.js", "TypeScript", "JavaScript ES6+", "Redux", "Context API", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "jQuery"] },
   { cat: "Backend", color: "#38bdf8", icon: "lucide:server", items: ["Node.js", "Express.js", "REST APIs", "Apollo GraphQL"] },
-  { cat: "Database", color: "#34d399", icon: "lucide:database", items: ["MongoDB", "MySQL", "Redux", "Context API"] },
+  { cat: "Database", color: "#34d399", icon: "lucide:database", items: ["MongoDB", "MySQL"] },
   { cat: "DevTools", color: "#fb923c", icon: "lucide:wrench", items: ["Git", "GitLab", "Postman", "VS Code", "Fetch/Axios"] },
 ];
 
@@ -67,7 +67,7 @@ export const PROJECTS = [
     subtitle: "Clinic Management SaaS Platform",
     description:
       "A production SaaS platform serving aesthetic practitioners worldwide for managing digital consent forms, client bookings, prescriptions, team roles, and in-app payments. Handles real-time data across web and mobile clients.",
-    tech: ["React.js", "Next.js", "TypeScript", "Node.js", "MySQL"],
+    tech: ["React.js", "Next.js", "TypeScript", "Node.js", "MongoDB", "Apollo GraphQL", "MySQL"],
     link: "https://facesconsent.com",
     linkLabel: "View Live Site",
     accentColor: "#a78bfa",
