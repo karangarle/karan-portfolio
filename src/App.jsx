@@ -317,7 +317,7 @@ export default function App() {
           {/* Resume + Mobile toggle */}
           <div className="flex items-center gap-3">
             <a
-              href={`${import.meta.env.BASE_URL}Karan_Garale_Resume_01-08.pdf`}
+              href={`${import.meta.env.BASE_URL}Karan_Garale_MERN_Developer.pdf`}
               target="_blank"
               rel="noreferrer"
               className="hidden sm:flex btn-primary text-sm px-5 py-2"
@@ -492,7 +492,7 @@ export default function App() {
                   Let's Talk
                 </motion.a>
                 <motion.a
-                  href={`${import.meta.env.BASE_URL}Karan_Garale_Resume_01-08.pdf`}
+                  href={`${import.meta.env.BASE_URL}Karan_Garale_MERN_Developer.pdf`}
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ scale: 1.03 }}
