@@ -1,12 +1,18 @@
 import { useRef, useCallback } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
 export default function TiltCard({ children, className = "" }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotX = useTransform(y, [-0.5, 0.5], [6, -6]);
-  const rotY = useTransform(x, [-0.5, 0.5], [-6, 6]);
+
+  // Smooth spring physics configuration for butter-smooth tilt
+  const springConfig = { stiffness: 150, damping: 20, mass: 0.5 };
+  const smoothX = useSpring(x, springConfig);
+  const smoothY = useSpring(y, springConfig);
+
+  const rotX = useTransform(smoothY, [-0.5, 0.5], [4, -4]);
+  const rotY = useTransform(smoothX, [-0.5, 0.5], [-4, 4]);
 
   const onMove = useCallback(
     (e) => {
@@ -29,7 +35,6 @@ export default function TiltCard({ children, className = "" }) {
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       style={{ rotateX: rotX, rotateY: rotY, transformStyle: "preserve-3d" }}
-      transition={{ type: "spring", stiffness: 400, damping: 40 }}
       className={className}
     >
       {children}

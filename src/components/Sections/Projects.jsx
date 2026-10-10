@@ -18,9 +18,8 @@ export default function Projects() {
             <Reveal key={title} variant={i % 2 === 0 ? fadeLeft : fadeRight}>
               <TiltCard>
                 <motion.div
-                  whileHover={{ borderColor: accentColor + "60" }}
-                  className="project-card surface rounded-2xl overflow-hidden"
-                  style={{ transition: "border-color 0.3s ease" }}
+                  whileHover={{ y: -4, borderColor: accentColor + "60" }}
+                  className="project-card surface rounded-2xl overflow-hidden transition-all duration-300 ease-out"
                 >
                   <div className="grid md:grid-cols-5">
                     {/* ─ Left accent ─ */}

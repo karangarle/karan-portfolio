@@ -203,22 +203,22 @@ export default function Hero() {
                 }}
               />
               <div
-                className="relative w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden"
+                className="relative w-72 h-[340px] sm:w-80 sm:h-[400px] xl:w-96 xl:h-[460px] rounded-2xl overflow-hidden"
                 style={{ border: "2px solid #21262d", borderRadius: "22px" }}
               >
                 <img
                   src={image}
                   alt="Karan Garale — MERN Stack Developer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 {/* overlay gradient at bottom */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 h-1/3"
-                  style={{ background: "linear-gradient(to top, rgba(13,17,23,0.9), transparent)" }}
+                  className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none"
+                  style={{ background: "linear-gradient(to top, rgba(13,17,23,0.95) 20%, transparent)" }}
                 />
-                <div className="absolute bottom-4 left-4 right-4">
+                <div className="absolute bottom-4 left-4 right-4 text-center z-10">
                   <p className="text-white font-bold text-lg leading-tight">Karan Garale</p>
-                  <p className="text-sm" style={{ color: "#a78bfa" }}>
+                  <p className="text-sm font-medium" style={{ color: "#a78bfa" }}>
                     MERN Stack Developer
                   </p>
                 </div>
@@ -227,22 +227,22 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-5 -right-5 surface rounded-2xl px-4 py-3 text-center shadow-xl"
+                className="absolute -top-4 -right-4 surface rounded-2xl px-4 py-3 text-center shadow-xl backdrop-blur-md z-20"
                 style={{ border: "1px solid #30363d", minWidth: "90px" }}
               >
                 <p className="text-2xl font-black gradient-text">2+</p>
-                <p className="text-xs" style={{ color: "#8b949e" }}>
+                <p className="text-xs font-semibold" style={{ color: "#8b949e" }}>
                   Years Exp.
                 </p>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-5 -left-5 surface rounded-2xl px-4 py-3 text-center shadow-xl"
+                className="absolute -bottom-5 -left-8 surface rounded-2xl px-4 py-3 text-center shadow-2xl backdrop-blur-md z-20"
                 style={{ border: "1px solid #30363d", minWidth: "90px" }}
               >
                 <p className="text-2xl font-black gradient-text">10+</p>
-                <p className="text-xs" style={{ color: "#8b949e" }}>
+                <p className="text-xs font-semibold" style={{ color: "#8b949e" }}>
                   Projects
                 </p>
               </motion.div>
